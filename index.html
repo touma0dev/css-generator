@@ -87,7 +87,7 @@
                             setTimeout(function () {
                                 elemento.style.opacity = 1;
                                 elemento.style['z-index'] = '3';
-                            }, 100);
+                            },900);
                             document.getElementById('disable-push').disabled = true;
                         }
                     }
@@ -110,20 +110,10 @@
                             setTimeout(function () {
                                 elemento.style.opacity = 1;
                                 elemento.style['z-index'] = '3';
-                            }, 100);
+                            }, 900);
                         }
                     }
-                    var isPageRefreshed = false;
-                    window.onload = function () {
-                        // Verificar se a página ainda não foi atualizada após o refresh
-                        if (!isPageRefreshed) {
-                            // Chamar a função correspondente aqui
-                            down();
-                            // Definir a flag como verdadeiro para indicar que a página já foi atualizada
-                            isPageRefreshed = true;
-                        }
-                    };
-
+                   
                 </script>
             </div>
         </div>
