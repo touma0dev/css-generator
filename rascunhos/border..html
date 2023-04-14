@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Box Styles</title>
+    <link rel="stylesheet" href="/lib/css/bootstrap.css">
+    <link rel="stylesheet" href="/lib/css/border.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center mb-6">Border-Radious</h1>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <div class="form-group">
+                    <label for="borderTopLeftRadius">Border Top Left Radius:</label>
+                    <input type="range" id="borderTopLeftRadius" class="form-control-range" value="0"
+                        oninput="boxradious()">
+                </div>
+                <div class="form-group">
+                    <label for="borderTopRightRadius">Border Top Right Radius:</label>
+                    <input type="range" id="borderTopRightRadius" class="form-control-range" value="0"
+                        oninput="boxradious()">
+                </div>
+                <div class="form-group">
+                    <label for="borderBottomLeftRadius">Border Bottom Left Radius:</label>
+                    <input type="range" id="borderBottomLeftRadius" class="form-control-range" value="0"
+                        oninput="boxradious()">
+                </div>
+                <div class="form-group">
+                    <label for="borderBottomRightRadius">Border Bottom Right Radius:</label>
+                    <input type="range" id="borderBottomRightRadius" class="form-control-range" value="0"
+                        oninput="boxradious()">
+                </div>
+                <div class="form-group">
+                    <label for="borderRadiusAll">Border Radius All:</label>
+                    <input type="range" min="0" max="50" id="borderRadiusAll" class="form-control-range" value="0"
+                        oninput="updateAll()">
+                </div>
+                <div class="form-group">
+                    <label for="borderColorPicker">Border Color:</label>
+                    <input type="color" id="borderColorPicker" class="form-control" oninput="boxradious()">
+                </div>
+                <div class="form-group">
+                    <label for="colorPicker">Box Shadow Color:</label>
+                    <input type="color" id="colorPicker" class="form-control" oninput="boxradious()">
+                </div>
+            </div>
+                <div class="form-group col-md-6">
+                    <div class="box" id="box"></div>
+                    <div class="output">
+                        <h3 class="mt-4">Código CSS gerado:</h3>
+                        <div class="" id="codeOutput">
+                            <code>
+                                <li>border-radius: 0% 0% 40% 0% ;</li>
+                                <li>background-color: #000000;</li>
+                                <li>border-color: #000000;</li>
+                                </code>
+                    </div>
+                    <div class="float-right copy">
+                        <svg id="copy" width="30px" onclick="bordercopy()" height="30px" viewBox="0 0 1024 1024"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill="#000000"
+                                d="M768 832a128 128 0 0 1-128 128H192A128 128 0 0 1 64 832V384a128 128 0 0 1 128-128v64a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64h64z" />
+                            <path fill="#000000"
+                                d="M384 128a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64V192a64 64 0 0 0-64-64H384zm0-64h448a128 128 0 0 1 128 128v448a128 128 0 0 1-128 128H384a128 128 0 0 1-128-128V192A128 128 0 0 1 384 64z" />
+                        </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/lib/script/border.js">// Função para atualizar os estilos do box e gerar o código CSS
+
+    </script>
+</body>
+
+</html>
