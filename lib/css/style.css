@@ -45,18 +45,27 @@ h1 {
   font-size: 16pt;
 }
 
-.navbar {
-  z-index: 99;
+header {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
   position: fixed;
   left: 0;
   right: 0;
-  top: 0;
+  top: 0px;
+  z-index: 99;
+}
+
+.navbar {
   display: flex;
   align-items: center;
   align-content: center;
   justify-content: space-around;
   height: 80px;
-  margin: 30px 30px;
+  margin: 20px 30px;
+  max-width: 3330px;
+  min-width: 800px;
   background: var(--glow);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
