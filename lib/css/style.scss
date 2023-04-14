@@ -57,7 +57,7 @@ a,li{
 .navbar{
     @include preset.flex-center;
     justify-content: space-around;
-    height: 80px;
+    height: 70px;
     margin:20px 30px;
     max-width: 3330px;
     background: var(--glow);
