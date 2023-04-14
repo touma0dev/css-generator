@@ -8449,4 +8449,6 @@ input[type="range"]:focus {
     outline-color: #bfdeff !important;
     box-shadow: 0 0 0px #bfdeff !important;
   }
-  
+  #copy{
+    cursor: pointer;
+  }

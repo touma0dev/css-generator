@@ -26,11 +26,11 @@
             </div>
             <div class="form-group">
               <label for="colorPicker">Cor do Border e Box Shadow:</label>
-              <input type="color" class="form-control" id="colorPicker"  oninput="updateBoxStyles()"/>
+              <input type="color"  value="#ffc7c7" class="form-control" id="colorPicker"  oninput="updateBoxStyles()"/>
             </div>
             <div class="form-group">
                 <label for="colorPicker">Cor do Border :</label>
-                <input type="color" class="form-control" id="borderColorPicker" oninput="updateBoxStyles()"/>
+                <input type="color" value="#a44141" class="form-control" id="borderColorPicker" oninput="updateBoxStyles()"/>
               </div>
             <div class="form-group">
               <label for="spreadRadius">Spread Radius:</label>
@@ -49,9 +49,13 @@
             <div class="box" id="box"></div>
             <div class="output">
               <h3 class="mt-4">Código CSS gerado:</h3>
-               <div class="" id="codeOutput"></div>
+               <div class="" id="codeOutput">
+                  border-width: 0px;<br>
+                  border-color: #000000;<br>
+                  box-shadow: 0px 0px 0px #000000;</div>
+               </div>
                <div class="float-right copy">
-                <svg id="copy" width="30px" height="30px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                <svg id="copy" width="30px" onclick="copyToClipboardbox()" height="30px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
                   <path fill="#000000" d="M768 832a128 128 0 0 1-128 128H192A128 128 0 0 1 64 832V384a128 128 0 0 1 128-128v64a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64h64z"/>
                   <path fill="#000000" d="M384 128a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64V192a64 64 0 0 0-64-64H384zm0-64h448a128 128 0 0 1 128 128v448a128 128 0 0 1-128 128H384a128 128 0 0 1-128-128V192A128 128 0 0 1 384 64z"/>
                 </svg>
