@@ -8420,3 +8420,8 @@ input[type="range"]:focus {
   #copy{
     cursor: pointer;
   }
+  .mb-6{
+    margin-top: -25px;
+    text-align: center!important;
+    font-size: 2.5rem;
+  }
