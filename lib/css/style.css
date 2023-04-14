@@ -57,6 +57,10 @@ header {
   z-index: 99;
 }
 
+.test {
+  width: 700px;
+}
+
 .navbar {
   display: flex;
   align-items: center;
@@ -65,7 +69,6 @@ header {
   height: 80px;
   margin: 20px 30px;
   max-width: 3330px;
-  min-width: 800px;
   background: var(--glow);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
