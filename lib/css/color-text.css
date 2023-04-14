@@ -42,16 +42,6 @@ color: #d10303;
 word-wrap: break-word;
 font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 font-size: 1em;
-}h1 {
-display: block;
-font-size: 2em;
-margin-block-start: 0.67em;
-margin-block-end: 0.67em;
-margin-inline-start: 0px;
-margin-inline-end: 0px;
-font-weight: bold;
-font-weight: 500;
-  line-height: 1.2;
 }
 :root {
     --blue: #007bff;
@@ -147,5 +137,4 @@ font-weight: 500;
 #copy{
   cursor: pointer;
 }
-/*  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">*/
  
