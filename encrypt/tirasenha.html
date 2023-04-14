@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo de Descriptografia de Arquivo</title>
+</head>
+<body>
+    <h1>Exemplo de Descriptografia de Arquivo</h1>
+    <form id="decryptForm">
+        <label for="fileInput">Escolha o arquivo criptografado:</label>
+        <input type="file" id="fileInput" name="fileInput">
+        <br>
+        <label for="passwordInput">Senha:</label>
+        <input type="password" id="passwordInput" name="passwordInput">
+        <br>
+        <button type="submit">Descriptografar</button>
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sjcl/1.0.8/sjcl.min.js"></script>
+    <script>
+        document.getElementById('decryptForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var fileInput = document.getElementById('fileInput');
+            var passwordInput = document.getElementById('passwordInput');
+            
+            if (fileInput.files.length === 0) {
+                alert('Por favor, selecione um arquivo.');
+                return;
+            }
+            
+            var file = fileInput.files[0];
+            var password = passwordInput.value;
+            
+            var reader = new FileReader();
+            reader.onload = function(event) {
+                var encrypted = event.target.result;
+                try {
+                    var decrypted = sjcl.decrypt(password, encrypted);
+                    var blob = new Blob([decrypted], { type: 'application/octet-stream' });
+                    var downloadLink = document.createElement('a');
+                    downloadLink.href = URL.createObjectURL(blob);
+                    downloadLink.download = file.name.replace('.encrypted', '');
+                    downloadLink.click();
+                } catch (error) {
+                    alert('Erro ao descriptografar o arquivo. Verifique se a senha está correta.');
+                }
+            };
+            reader.readAsText(file);
+        });
+    </script>
+</body>
+</html>

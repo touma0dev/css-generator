@@ -1,0 +1,159 @@
+@use "preset";
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@300&family=Oswald&display=swap');
+*{
+    font-family: 'Chivo Mono', monospace;
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --white:#ffffff;
+    --black:rgb(54, 54, 54);
+    --background:#14ff6e ;
+    --glow:#14ff6e40;
+    --hover:#1c1717;
+    --text-shadow:#ffffff;
+}
+//Tirando os atributos feios do "a" e "li"
+a,li{
+    text-decoration: none;
+    list-style-type: none;
+}
+.navbar{
+    z-index: 99;
+    position:fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    @include preset.flex-center;
+    justify-content: space-around;
+    height: 80px;
+    margin:30px 30px;
+    background: var(--glow);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(16.3px);
+    -webkit-backdrop-filter: blur(16.3px);
+    border: 1px solid var(--glow);
+    background: var(--glow);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(16.3px);
+    -webkit-backdrop-filter: blur(16.3px);
+    border: 1px solid rgba(20, 255, 110, 0.3);
+
+    &-logo{
+        @include preset.flex-center;
+        li{
+            display: inline-block;
+        }
+        .ancora{
+            text-shadow: 0px 0px 6px #000000;
+            a{
+                color: var(--white);
+                --black:black;
+            }
+        }
+        .barco{
+            padding: 0px 10px;
+        }
+        h1{
+        font-size:16pt;
+        }
+    }
+    &-lista{
+        @include preset.flex-center;
+        li{
+            -moz-transform: scale(1);
+            -webkit-transform: scale(1);
+            -o-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+            transition: all ease 1s;
+            a{
+                font-size: 15pt;
+                font-weight: 600;
+                padding: 0px 15px;
+                color: var(--white);
+                text-shadow: 0px 0px 6px var(--black);
+          
+                &:hover{
+                    text-shadow: 3px 5px 13px var(--hover);
+                    color:var(--hover);
+                    transition: all ease 0.4s;
+                }
+            }
+            &:hover{
+                text-shadow: 3px 5px 13px var(--hover);
+                color:var(--hover);
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+.seletor{
+    @include preset.flex-center;
+    justify-content: center;
+    height: 30px;
+    margin-top: 130px;
+}
+
+/* CSS */
+button {
+    appearance: none;
+    background-color: #FAFBFC;
+    border: 1px solid rgba(27, 31, 35, 0.15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+    box-sizing: border-box;
+    color: #24292E;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    padding: 6px 16px;
+    position: relative;
+    transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+    word-wrap: break-word;
+  }
+  
+  button:hover {
+    background-color: #F3F4F6;
+    text-decoration: none;
+    transition-duration: 0.1s;
+  }
+  
+  button:disabled {
+    background-color: #FAFBFC;
+    border-color: rgba(27, 31, 35, 0.15);
+    color: #959DA5;
+    cursor: default;
+  }
+  
+  button:active {
+    background-color: #EDEFF2;
+    box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+    transition: none 0s;
+  }
+  
+  button:focus {
+    outline: 1px transparent;
+  }
+  
+  button:before {
+    display: none;
+  }
+  
+  button:-webkit-details-marker {
+    display: none;
+  }

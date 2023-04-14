@@ -1,0 +1,48 @@
+/* Estiliza a barra de deslizamento (slider) do elemento de entrada do tipo "range" */
+input[type="range"]::-webkit-slider-thumb {
+  background-color: red; /* Define a cor do polegar do slider como vermelho */
+}
+
+input[type="range"]::-moz-range-thumb {
+  background-color: red; /* Define a cor do polegar do slider como vermelho */
+}
+
+input[type="range"]::-ms-thumb {
+  background-color: red; /* Define a cor do polegar do slider como vermelho */
+}
+
+   /* Estilos personalizados para o gerador */
+    .container {
+        margin: 0 auto;
+        margin-top: -350px;
+        max-width:600px;
+        padding: 30px 30px;
+      }
+      .box {
+        max-width: 500px;
+        min-width:240px;
+        height: 300px;
+        border: 1px solid #000;
+        box-shadow: 0 0 0 0 #000;
+        margin-bottom: 20px;
+        background-color: rgb(221, 208, 88);
+      }
+      .output {
+        margin-top: 20px;}
+        
+input[type="color"] {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  width: 100%;
+}
+/* Remove a borda de foco do elemento de entrada do tipo "range" */
+input[type="range"]:focus,
+input[type="range"]::-moz-focus-inner {
+  outline: none !important;
+  box-shadow: none !important;
+}

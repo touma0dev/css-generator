@@ -1,0 +1,74 @@
+input:focus {
+  outline: none; /* Remove a borda de foco */
+}
+
+/* Alternativamente, você pode definir uma cor de borda personalizada em vez de "none" */
+input:focus {
+  outline-color: red; /* Define a cor da borda de foco como vermelho */
+}
+
+
+.boat{
+  position: absolute;
+  top: 0;
+  right: 0;  
+}
+.ancor{
+ position: relative;
+}
+/*Fix Preset*/
+.container {
+  margin: 0 auto;
+  margin-top: 50px;
+  max-width:600px;
+  padding: 30px 30px;
+}
+.box {
+  max-width: 500px;
+  min-width:240px;
+  height: 300px;
+  border: 1px solid #000;
+  box-shadow: 0 0 0 0 #000;
+  margin-bottom: 20px;
+  background-color: rgb(221, 208, 88);
+}
+.output {
+  margin-top: 20px;
+}
+.style-text{
+text-align: center;
+border-width: 1px;
+border-color: #ffffff;
+padding: 15px 15px;
+}
+.col-md-6{
+  padding: 15px 5px;
+}
+.box-color{
+padding: 15px 5px;
+margin: 0 0px;
+}
+.alert-info{
+padding: 22px 15px;
+}
+.card{
+padding: 30px 10px;
+}
+#copy{
+position: relative;
+top: 30px;
+right: 13px;
+}
+.preview{
+  width: 230px;
+  height: 230px;
+  background-color: red;
+  margin: 0 20px;
+}
+@media screen and (max-width: 757px) {
+  .preview{
+   width: 340px;
+    margin: 0 110px;
+height: 340px;
+  }
+}

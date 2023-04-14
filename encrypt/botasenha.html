@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo de Criptografia de Arquivo</title>
+</head>
+<body>
+    <h1>Exemplo de Criptografia de Arquivo</h1>
+    <form id="uploadForm">
+        <label for="fileInput">Escolha um arquivo:</label>
+        <input type="file" id="fileInput" name="fileInput">
+        <br>
+        <label for="passwordInput">Senha:</label>
+        <input type="password" id="passwordInput" name="passwordInput">
+        <br>
+        <button type="submit">Criptografar e Fazer Download</button>
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sjcl/1.0.8/sjcl.min.js"></script>
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var fileInput = document.getElementById('fileInput');
+            var passwordInput = document.getElementById('passwordInput');
+            
+            if (fileInput.files.length === 0) {
+                alert('Por favor, selecione um arquivo.');
+                return;
+            }
+            
+            var file = fileInput.files[0];
+            var password = passwordInput.value;
+            
+            var reader = new FileReader();
+            reader.onload = function(event) {
+                var plaintext = event.target.result;
+                var encrypted = sjcl.encrypt(password, plaintext);
+                var blob = new Blob([encrypted], { type: 'application/octet-stream' });
+                var downloadLink = document.createElement('a');
+                downloadLink.href = URL.createObjectURL(blob);
+                downloadLink.download = file.name + '.encrypted';
+                downloadLink.click();
+            };
+            reader.readAsText(file);
+        });
+    </script>
+</body>
+</html>
