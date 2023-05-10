@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@300&family=Oswald&display=swap");
 * {
-  font-family: "Chivo Mono", monospace;
-  font-family: "Oswald", sans-serif;
+
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -17,6 +16,10 @@
   width: 16px;
 }
 
+body,html{
+  font-family: "Chivo Mono", monospace;
+  font-family: "Oswald", sans-serif;
+}
 *::-webkit-scrollbar-track {
   background: #eee7e7;
 }
@@ -232,4 +235,29 @@ button:-webkit-details-marker {
           margin-block-start: 0.83em;
   -webkit-margin-after: 0.83em;
           margin-block-end: 0.83em;
-}/*# sourceMappingURL=style.css.map */
+} 
+.main{
+  margin: 0 auto;
+  max-width:640px;
+}
+.main-title{
+  margin-top: 105pt;
+  text-align: center;
+  font-size: 17pt;
+}
+
+.main dl{
+  margin: 15px;
+  text-indent: 0.4em;
+}
+.main dt{
+  font-size: 1.2em;
+  font-weight:600;
+}.main dt li{
+  list-style-type:disc ;
+}
+.main dd{
+  text-indent: 1em;
+  padding: 15px 0px;
+  font-size: 1.2em;
+}
